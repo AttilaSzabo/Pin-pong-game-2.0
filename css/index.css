@@ -5,10 +5,11 @@
 }
 
 body {
-    background-image: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)), url(./images/pc_game.jpg);
+    background-image: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)), url(../images/pc_game.jpg);
     width: 100vw;
     height: 100vh;
     background-size: cover;
+    background-position: center;
 }
 
 .menu {

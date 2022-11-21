@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(rgba(0,0,0,.4),rgba(0,0,0.4)), url(../images/console.jpg);
+    background-size: cover;
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.text {
+    color: white;
+    text-align: center;
+    margin-top: 60px;
+    font-size: 1.2rem;
+}
+
+.container {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:20px 0;
+    width: 280px;
+    height: 300px;
+    border-radius: 30px;
+    background-color: rgba(3, 3, 3, 0.404);
+    box-shadow: inset 0px 0px 20px rgb(153, 51, 51);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.box:hover {
+    transform: translateY(-10px);
+}
+
+.box img {
+    width: 180px;
+    box-shadow: 0 0 20px rgb(255, 3, 3);
+    border-radius: 50%;
+}
+
+@media screen and (min-width:768px) {
+
+    .text {
+        font-size: 2.2rem;
+        margin-bottom: 30px;
+    }
+
+}
+
+@media screen and (min-width:992px) {
+
+    .container {
+        flex-direction: row;
+    }
+
+    .text {
+        margin: 150px;
+    }
+
+    .box {
+        margin: 50px 30px;
+    }
+}
