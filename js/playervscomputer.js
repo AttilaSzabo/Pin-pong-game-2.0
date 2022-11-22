@@ -1,5 +1,4 @@
-alert("Left players :\nUp: W\nDown: S");
-alert("Right players :\nUp: Up bottom\nDown: Down bottom");
+//alert("Left players :\nUp: W\nDown: S");
 let canvas = document.querySelector('.canvas');
 let ctx = canvas.getContext('2d');
 
@@ -107,15 +106,11 @@ function ballLaunch () {
 window.addEventListener("keydown", function(event) {
     if (event.keyCode === 87) {leftRacketUp = true;}
     if (event.keyCode === 83) {leftRacketDown = true;}
-    if (event.keyCode === 38) {rightRacketUp = true;}
-    if (event.keyCode === 40) {rightRacketDown = true;}
 });
 
 window.addEventListener("keyup", function(event) {
     if (event.keyCode === 87) {leftRacketUp = false;}
     if (event.keyCode === 83) {leftRacketDown = false;}
-    if (event.keyCode === 38) {rightRacketUp = false;}
-    if (event.keyCode === 40) {rightRacketDown = false;}
 });
 
 // Moving rackets
@@ -125,6 +120,12 @@ function movingRacket () {
     if (rightRacketUp) {rightRacketyPosition-=racketAcceleration}
     if (rightRacketDown) {rightRacketyPosition+=racketAcceleration}
 };
+
+// Computer player
+function automaPlayer () {
+    rightRacketUp = ballyPosition < rightRacketyPosition+5
+    rightRacketDown = ballyPosition > rightRacketyPosition
+}
 
 // edge of the field
 function edgeOfTheField () {
@@ -149,6 +150,7 @@ function winning () {
 // loop
 function game () {
     ctx.clearRect(0,0,canvas.width,canvas.height);
+    automaPlayer ()
     middleOfTheTrack ();
     drawingPlayers(leftPlayerScore,50,80);
     drawingPlayers(rightPlayerScore,1210,80);
