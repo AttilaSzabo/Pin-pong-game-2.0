@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/tournament.css">
+    <title>Tournament</title>
+</head>
+<body>
+    <div class="description">
+        <h1 class="white">Game description</h1>
+        <ul>
+            <li>The player who reaches 10 points wins.</li>
+            <li>They can play again if they want.</li>
+        </ul>
+    </div>
+    <div class="input">
+        <form action="#" method="get">
+            <input required class="players" type="text" placeholder="Full name">
+            <div class="buttons">
+                <button id="submit" type="submit">Send</button>
+                <button class="start">Start</button>
+            </div>
+        </form>
+    </div>
+    <div class="name">
+        <div class="name1"></div>
+        <div class="name2"></div>
+    </div>
+    <div class="canvas_container">
+        <canvas class="canvas" width="1300px" height="600px"></canvas>
+    </div>
+    <script src="./js/tournament.js"></script>
+</body>
+</html>

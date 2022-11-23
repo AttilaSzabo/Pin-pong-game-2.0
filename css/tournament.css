@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)), url(../images/game.jpg);
+}
+
+li {
+    font-size: 1rem;
+    color: rgb(201, 201, 201);
+    letter-spacing: 1.4px;
+    text-shadow: 0 0 15px black;
+}
+
+.white {
+    color: rgb(9, 236, 39);
+    text-shadow: 2px 2px 5px rgb(90, 85, 85);
+    font-size: 2rem;
+}
+
+.description {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.input input {
+    width: 280px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    color: white;
+    text-align: center;
+    border: 1px solid white;
+    background-color: transparent;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.buttons button {
+    width: 60px;
+    height: 30px;
+    margin: 0 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.name {
+    outline: 1px solid white;
+    height: 100%;
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    line-height: 1.4;
+    font-size: 1.2rem;
+    letter-spacing: 1.3px;
+}
+
+.name1,
+.name2 {
+    border: 1px solid yellow;
+    height: 140px;
+    margin: 5px 5px;
+    width: 90%;
+    text-align: center;
+}
+
+.canvas_container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.canvas {
+    background-color: rgba(5, 5, 5, 0.527);
+    border: 5px solid rgb(197, 194, 194);
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(252, 252, 252, 0.425);
+}
+
+.canvas {
+    width: 330px;
+}
+
+@media screen and (min-width:768px) {
+
+    .canvas {
+        width: 750px
+    }
+
+    .name {
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width:1305px) {
+    
+    .canvas {
+        width: 1300px
+    }
+}
+
