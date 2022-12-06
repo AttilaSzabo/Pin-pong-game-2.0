@@ -64,8 +64,8 @@ function middleOfTheTrack () {
 
 // random direction
 function randomDirection () {
-    ballxPosition = 645;
-    ballyPosition = 295;
+    ballxPosition = 650;
+    ballyPosition = 300;
     ballxSpeed = (Math.trunc(Math.random())* 2+1) * (Math.round(Math.random())* 2-1);
     ballySpeed = (Math.trunc(Math.random())* 2+1) * (Math.round(Math.random())* 2-1);
 };

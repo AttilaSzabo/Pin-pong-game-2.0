@@ -35,7 +35,7 @@ li {
 }
 
 .input input {
-    width: 280px;
+    width: 300px;
     height: 40px;
     border: none;
     border-radius: 10px;
@@ -62,34 +62,75 @@ li {
 }
 
 .name {
-    outline: 1px solid white;
     height: 100%;
     width: 90%;
     margin: 20px auto;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
     text-align: center;
     line-height: 1.4;
-    font-size: 1.2rem;
     letter-spacing: 1.3px;
+    list-style: none;
 }
 
-.name1,
-.name2 {
-    border: 1px solid yellow;
-    height: 140px;
-    margin: 5px 5px;
+.name1 {
+    height: 100%;
     width: 90%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
     text-align: center;
+    line-height: 1.4;
+    letter-spacing: 1.3px;
+    list-style: none;
+}
+
+.name li {
+    margin: 0 10px;
+    background-color: white;
+    padding: 5px 15px;
+    border-radius: 10px;
+    color: black;
+}
+
+.name1 li {
+    margin: 0 10px;
+    background-color: red;
+    padding: 5px 15px;
+    border-radius: 10px;
+    color: white;
 }
 
 .canvas_container {
     margin-top: 50px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+}
+
+.versenyzok {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.first li,
+.next li {
+    border-radius: 10px;
+    width: 150px;
+    height: 30px;
+    color: white;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
 .canvas {
@@ -102,6 +143,8 @@ li {
 .canvas {
     width: 330px;
 }
+
+
 
 @media screen and (min-width:768px) {
 
