@@ -1,8 +1,10 @@
 # Pin-pong-game-2.0
 
 Egy Pong játék amely először 1972-ben került a játéktermekbe.
-Most újra játszhatod számítogép ellen, vagy akár több játokosokkal is indíthattok egy turnajt.
+Most újra játszhatod számítogép ellen, vagy akár több játokosokkal is indíthattok egy turnajt.<br>
+
 #####A link: https://2xjs5w.csb.app/
+
 ####Játék opciók leírása:
 *Játékos a játékos ellen:*
    - Addig játsztok amíg valaki nem nyer.
