@@ -111,29 +111,29 @@ function ballLaunch () {
     ballxPosition += ballxSpeed; 
     ballyPosition += ballySpeed;
     if (ballyPosition >= 595 || ballyPosition <= 5) {
-       //new Audio("../song/wall.mp3").play();
+       new Audio("../song/wall.mp3").play();
         ballySpeed = -ballySpeed;
     };
     if (ballxPosition > 1340) {
-        //new Audio("../song/gameover.mp3").play();
+        new Audio("../song/gameover.mp3").play();
         leftPlayerScore +=1;
         randomDirection ();
         racketAcceleration = 1.5
     };
     if (ballxPosition < -20) {
-        //new Audio("../song/gameover.mp3").play();
+        new Audio("../song/gameover.mp3").play();
         rightPlayerScore +=1;
         randomDirection ();
         racketAcceleration = 1.5
     };
     if (ballxPosition <= 30 &&  ballyPosition > leftRacketyPosition-10 && ballyPosition < leftRacketyPosition + 90) {
-        //new Audio("../song/racket.mp3").play();
+        new Audio("../song/racket.mp3").play();
         ballxSpeed = -ballxSpeed;
         ballxSpeed *= acceleration;
         racketAcceleration *= 1.2;
     };
     if (ballxPosition >= 1270 &&  ballyPosition > rightRacketyPosition-10 && ballyPosition < rightRacketyPosition + 90) {
-        //new Audio("../song/racket.mp3").play();
+        new Audio("../song/racket.mp3").play();
         ballxSpeed = -ballxSpeed;
         ballxSpeed *= acceleration;
         racketAcceleration *= 1.2;
