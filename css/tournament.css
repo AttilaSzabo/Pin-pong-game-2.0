@@ -6,6 +6,7 @@
 
 body {
     background-image: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)), url(../images/game.jpg);
+    overflow: hidden;
 }
 
 li {
@@ -121,9 +122,14 @@ li {
     width: 330px;
 }
 
+.canvas1 {
+    width: 330px;
+}
+
 @media screen and (min-width:768px) {
 
-    .canvas {
+    .canvas,
+    .canvas1 {
         width: 750px
     }
 
@@ -136,6 +142,10 @@ li {
     
     .canvas {
         width: 1300px
+    }
+
+    .canvas1 {
+        width: 800px;
     }
 }
 

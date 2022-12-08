@@ -41,18 +41,20 @@ let rightPlayers = false;
 
 // Adding and loading players
 function sendName () {
-    let num = +players.value;  // Összehasonlítom az inputban hogy szám e a beírt érték
-    if (players.value === "" ) {
-        players.placeholder = "Please enter a name";
-    } else if (num === num) {
-        players.placeholder = "You cannot enter a number";
-    } else if (playersName.length < 8) {
-        pushPlayers.innerHTML += `<li>${players.value}</li>`
-        playersName.push(players.value);
-    } else {
-        players.placeholder = "You cannot enter more names";
+    if (input === 0){
+        let num = +players.value;  // Összehasonlítom az inputban hogy szám e a beírt érték
+        if (players.value === "" ) {
+            players.placeholder = "Please enter a name";
+        } else if (num === num) {
+            players.placeholder = "You cannot enter a number";
+        } else if (playersName.length < 8) {
+            pushPlayers.innerHTML += `<li>${players.value}</li>`
+            playersName.push(players.value);
+        } else {
+            players.placeholder = "You cannot enter more names";
+        };
+        players.value = "";
     };
-    players.value = "";
 };
 
 // drawing the ball
@@ -67,7 +69,7 @@ function drawingBall (x,y,r) {
 function contestants (text,x,y) {
     ctx1.beginPath();
     ctx1.fillStyle= "white";
-    ctx1.font= "50px sans-serif";
+    ctx1.font= "30px sans-serif";
     ctx1.fillText(text,x,y);
 
 };
@@ -102,8 +104,8 @@ function middleOfTheTrack () {
 function randomDirection () {
     ballxPosition = 650;
     ballyPosition = 300;
-    ballxSpeed = (Math.trunc(Math.random())* 20+19) * (Math.round(Math.random())* 2-1);
-    ballySpeed = (Math.trunc(Math.random())* 20+19) * (Math.round(Math.random())* 2-1);
+    ballxSpeed = (Math.trunc(Math.random())* 2+1) * (Math.round(Math.random())* 2-1);
+    ballySpeed = (Math.trunc(Math.random())* 2+1) * (Math.round(Math.random())* 2-1);
 };
 
 // ball launch
@@ -238,8 +240,8 @@ function game () {
         window.requestAnimationFrame(game);
         ctx.clearRect(0,0,canvas.width,canvas.height);
         ctx1.clearRect(0,0,canvas.width,canvas.height);
-        contestants (playersName[0],50,50);
-        contestants (playersName[playersName.length-1],650,50);
+        contestants (playersName[0],800/4,50);
+        contestants (playersName[playersName.length-1],800/1.50,50);
         middleOfTheTrack ();
         drawingPlayersScore(leftPlayerScore,50,80);
         drawingPlayersScore(rightPlayerScore,1210,80);
